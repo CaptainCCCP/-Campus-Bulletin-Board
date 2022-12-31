@@ -1,0 +1,22 @@
+<!-- 登陆 -->
+<view class="myLogin">
+  <block wx:if="{{isLogin}}">
+    <image src="{{src}}"></image>
+    <text>{{nickName}}</text>
+  </block>
+  
+  <button wx:else open-type="getUserInfo" bindgetuserinfo="getMyInfo">未登录，点此登录</button>
+</view>
+<!-- <button bintap="login">授权登录</button>
+<text>{{nickName}}</text>
+<image src="{{touxiang}}"></image> -->
+<!-- 感兴趣列表 -->
+<view class="myFavorite"> 
+  <text>我感兴趣的（{{number}}）</text>
+  <view class="news-list">
+    <view class="news-item" wx:for="{{newsList}}" wx:key="{{item.id}}">
+      <image src="{{item.poster}}"></image>
+      <text bindtap = 'goToDetail' data-id="{{item.id}}">{{item.title}}————{{item.add_date}}</text>
+    </view>
+  </view>
+</view>

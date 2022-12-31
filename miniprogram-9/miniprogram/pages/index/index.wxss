@@ -1,0 +1,63 @@
+/* 幻灯片部分 */
+swiper{
+  height: 550rpx;
+  width:100%;
+}
+swiper image{
+  height: 100%;
+  width:100%;
+}
+/**可拖动悬浮按钮样式表**/
+.btn_Suspension{
+  position: fixed;
+  height: 100rpx;
+  width: 100rpx;
+  background-color: rgba(255, 255, 255, 0.755);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  box-shadow: 1px 0px 1px 1px #3A84FF;
+}
+.Suspension_logo{
+  position:absolute;
+  /* border: 1rpx solid red; */
+  height:80rpx;
+  width:150rpx;
+  left:20rpx;
+  top:15rpx;
+  color: #3A84FF;
+  font-weight: 700;
+}
+.bm{
+  position:absolute;
+  left: 20rpx;
+  color: #3A84FF;
+  top: 50rpx;
+  font-weight: 700;
+}
+.cornorMark{
+  position:absolute;
+  background: #3A84FF;
+  border:1px solid #3A84FF;
+  border-radius: 100px;
+  width:30rpx;
+  height:30rpx;
+  top:-17rpx;
+  right:3rpx;
+  color:#fff;
+  font-size: 12px;
+  text-align: center;
+
+}
+.cornorMark text{
+  position:absolute;
+  width:100%;
+  left:0%;
+  text-align: center;
+  top:-1px;
+}
+.content{
+ font-family: 'Courier New', Courier, monospace;
+}

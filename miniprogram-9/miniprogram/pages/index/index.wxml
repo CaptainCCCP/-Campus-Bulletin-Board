@@ -1,0 +1,29 @@
+<!-- 幻灯片 -->
+<swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+  <view wx:for="{{swiperImg}}" wx:key="swiper{{index}}">
+    <swiper-item>
+      <image src="{{item.src}}"></image>
+    </swiper-item>
+  </view>
+</swiper>
+<!-- 新闻列表 -->
+<view class="news-list">
+  <view class="news-item" wx:for="{{data}}" wx:key="index" >
+    <image src="{{item.images[0]}}" ></image>
+    <text bindtap = 'goToDetail' data-id="{{item.id}}">{{item.content}}</text>
+  </view>
+  <button plain="true" bindtap="get">加载更多</button>
+</view>
+<!-- 点击添加 -->
+<view class="btn_Suspension" bindtap="btn_Suspension_click" catchtouchmove="buttonMove" bindtouchstart="buttonStart" bindtouchend="buttonEnd" style="top:{{buttonTop}}px;left:{{buttonLeft}}px;">
+     <!-- 这里是按钮图标，下载地址会在文章底部说明 -->
+     <!-- <image class="Suspension_logo" src="../../images/yy.png"></image> -->
+  <view class="Suspension_logo">点击</view>
+  <view class="bm">发布</view>
+    <view wx:if="{{corner_data==0}}"></view>
+    <view wx:else>
+      <view class="cornorMark">
+        <text>{{corner_data}}</text>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,29 @@
+<view class='page'>
+  <textarea class='text' bindinput="input" placeholder="分享一下吧~" auto-height/>
+  <view class="images_box">
+  <block wx:key="imgbox" wx:for="{{filePath}}">
+   <view class='img-box'>
+    <image  mode="aspectFill" class='img' src='{{item}}'></image>
+    <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+     <image class='img1' src='../../images/delet2.png'></image>  
+    </view>
+   </view>
+  </block>
+  <view class='img-box' bindtap='addimage' wx:if="{{imgbox.length<9}}">
+   <image class='img' src='../../images/add1.png'></image>  
+  </view>
+ </view>
+ 
+
+ <!-- <view class="section"> -->
+  <!-- <view class="section__title">普通选择器<iew> -->
+  <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker" >
+      <text class="chose-a">#</text>
+      请选择：{{array[index]}}
+    </view>
+  </picker>
+</view> -->
+	<view class="sent" bindtap="btnsnb">立即发布</view>
+</view>
+
